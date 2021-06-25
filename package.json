@@ -1,0 +1,30 @@
+{
+  "name": "coc-api",
+  "version": "1.0.0",
+  "description": "Yet another Clash of Clans API, but with TS support",
+  "main": "dest/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbrustad/node-coc-api.git"
+  },
+  "keywords": [
+    "coc",
+    "coc-api",
+    "clash-of-clans"
+  ],
+  "author": "Lasse Brustad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lbrustad/node-coc-api/issues"
+  },
+  "homepage": "https://github.com/lbrustad/node-coc-api#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2"
+  }
+}
