@@ -1,6 +1,5 @@
 /// <reference path="../../../types/types.d.ts"/>
 
-import { AxiosResponse } from 'axios';
 import ClashOfClansAPI from '../../ClashOfClansAPI';
 
 interface IWarLogSearchAfterParams {
@@ -28,7 +27,7 @@ export default class WarLog {
             const res = await api.get<TWarLogSearchParams, IClanWarLogEntry[]>(
                 this.path.replace('{clanTag}', clanTag),
                 params
-            ) as AxiosResponse<IClanWarLogEntry[]>;
+            );
             return res.data;
         } catch (err: unknown) {
             throw err as IError;

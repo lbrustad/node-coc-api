@@ -1,6 +1,5 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import { AxiosResponse } from 'axios';
 import ClashOfClansAPI from '../ClashOfClansAPI';
 
 export default class ClanTag {
@@ -13,7 +12,7 @@ export default class ClanTag {
         clanTag = encodeURIComponent(clanTag);
 
         try {
-            const res = await api.get<undefined, IClan>( this.path.replace('{clanTag}', clanTag) ) as AxiosResponse<IClan>;
+            const res = await api.get<undefined, IClan>( this.path.replace('{clanTag}', clanTag) );
             return res.data;
         } catch (err: unknown) {
             throw err as IError;

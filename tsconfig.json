@@ -3,7 +3,7 @@
     /* Basic Options */
     "target": "ES6",
     "module": "CommonJS",
-    "outDir": "./dest/",
+    "outDir": "./dist/",
     "rootDir": "./src/",
 
     /* Strict Type-Checking Options */

@@ -141,6 +141,12 @@ interface ILeague {
     id?: number;
     iconUrls?: Object;
 }
+type TLeagueList = ILeague[];
+
+interface ILeagueSeason {
+    id?: string;
+}
+type TLeagueSeasonList = ILeagueSeason[];
 
 interface ILegendLeagueTournamentSeasonResult {
     trophies?: number;

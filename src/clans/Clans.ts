@@ -1,6 +1,5 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import { AxiosResponse } from 'axios';
 import ClashOfClansAPI from '../ClashOfClansAPI'
 
 interface IClansSearchParams {
@@ -42,7 +41,7 @@ export default class Clans {
 
     static async get(api: ClashOfClansAPI, params: IClansSearchParams, filters?: IFilter[]): Promise<IClan[]> {
         try {
-            const res = await Clans.getClanList(api, params) as AxiosResponse<IClanList>;
+            const res = await Clans.getClanList(api, params);
             const clanList = [...res.data.items];
             if (!filters) {
                 return clanList;
