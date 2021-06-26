@@ -1,4 +1,4 @@
-import Clans from '../src/Clans';
+import Clans from '../src/clans/Clans';
 import ClanTag from '../src/clans/ClanTag';
 import CurrentWar from '../src/clans/clantag/CurrentWar';
 import LeagueGroup from '../src/clans/clantag/currentwar/LeagueGroup';
