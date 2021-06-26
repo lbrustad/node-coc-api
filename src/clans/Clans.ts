@@ -1,7 +1,7 @@
-/// <reference path="types.d.ts"/>
+/// <reference path="../../types/types.d.ts"/>
 
 import { AxiosResponse } from 'axios';
-import ClashOfClansAPI from './ClashOfClansAPI'
+import ClashOfClansAPI from '../ClashOfClansAPI'
 
 interface IClansSearchParams {
     name?: string;

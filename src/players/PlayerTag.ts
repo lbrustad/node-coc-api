@@ -1,4 +1,4 @@
-/// <reference path="../types.d.ts"/>
+/// <reference path="../../types/types.d.ts"/>
 
 import ClashOfClansAPI from '../ClashOfClansAPI';
 
