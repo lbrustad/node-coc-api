@@ -1,8 +1,9 @@
+import api, { PLAYER_TAG, PLAYER_TOKEN } from './api';
+
 import Clans from '../src/clans/Clans';
 import Members from '../src/clans/clantag/Members';
 import PlayerTag from '../src/players/PlayerTag';
 import VerifyToken from '../src/players/playertag/VerifyToken';
-import api, { PLAYER_TAG, PLAYER_TOKEN } from './api';
 
 const tests = {
     playerTag: {

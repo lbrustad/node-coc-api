@@ -1,3 +1,5 @@
+import api from './api';
+
 import Clans from '../src/clans/Clans';
 import ClanTag from '../src/clans/ClanTag';
 import CurrentWar from '../src/clans/clantag/CurrentWar';
@@ -5,7 +7,6 @@ import LeagueGroup from '../src/clans/clantag/currentwar/LeagueGroup';
 import Members from '../src/clans/clantag/Members';
 import WarLog from '../src/clans/clantag/WarLog';
 import ClanWarLeagues from '../src/clans/ClanWarLeagues';
-import api from './api';
 
 const tests = {
     index: !true,
