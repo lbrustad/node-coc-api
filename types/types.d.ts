@@ -121,6 +121,11 @@ interface IError {
 
 interface IFloat {}
 
+interface IGoldPassSeason {
+    startTime?: string;
+    endTime?: string;
+}
+
 interface IJsonLocalizedName {}
 
 interface ILabel {
