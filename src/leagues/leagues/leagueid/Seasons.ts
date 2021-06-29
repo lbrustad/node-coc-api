@@ -17,15 +17,13 @@ type TSeasonsSearchAfterParams = ISeasonsSearchAfterParams | ISeasonsSearchBefor
 export default class Seasons {
     static readonly path: string = '/leagues/{leagueId}/seasons';
 
-    static async get(api: ClashOfClansAPI, leagueId: string, params?: TSeasonsSearchAfterParams): Promise<ILeagueSeason[]> {
-        leagueId = encodeURIComponent(leagueId);
-
+    static async get(api: ClashOfClansAPI, leagueId: number, params?: TSeasonsSearchAfterParams): Promise<ILeagueSeason[]> {
         try {
-            const res = await api.get<TSeasonsSearchAfterParams, ILeagueSeason[]>(
-                this.path.replace('{clanTag}', leagueId),
+            const res = await api.get<TSeasonsSearchAfterParams, ILeagueSeasonList>(
+                this.path.replace('{leagueId}', leagueId.toString()),
                 params
             );
-            return res.data;
+            return res.data.items;
         } catch (err: unknown) {
             throw err as IError;
         }

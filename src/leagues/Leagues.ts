@@ -19,11 +19,11 @@ export default class Leagues {
 
     static async get(api: ClashOfClansAPI, params?: TLeaguesSearchParams): Promise<ILeague[]> {
         try {
-            const res = await api.get<TLeaguesSearchParams, ILeague[]>(
+            const res = await api.get<TLeaguesSearchParams, ILeagueList>(
                 this.path,
                 params
             );
-            return res.data;
+            return res.data.items;
         } catch (err: unknown) {
             throw err as IError;
         }

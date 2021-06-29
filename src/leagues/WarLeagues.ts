@@ -19,11 +19,11 @@ export default class WarLeagues {
 
     static async get(api: ClashOfClansAPI, params?: TWarLeaguesSearchParams): Promise<IWarLeague[]> {
         try {
-            const res = await api.get<TWarLeaguesSearchParams, IWarLeague[]>(
+            const res = await api.get<TWarLeaguesSearchParams, IWarLeagueList>(
                 this.path,
                 params
             );
-            return res.data;
+            return res.data.items;
         } catch (err: unknown) {
             throw err as IError;
         }

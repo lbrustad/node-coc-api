@@ -141,12 +141,16 @@ interface ILeague {
     id?: number;
     iconUrls?: Object;
 }
-type TLeagueList = ILeague[];
+interface ILeagueList {
+    items: ILeague[];
+}
 
 interface ILeagueSeason {
     id?: string;
 }
-type TLeagueSeasonList = ILeagueSeason[];
+interface ILeagueSeasonList {
+    items: ILeagueSeason[];
+}
 
 interface ILegendLeagueTournamentSeasonResult {
     trophies?: number;
@@ -227,6 +231,28 @@ interface IPlayerLegendStatistics {
     bestSeason?: ILegendLeagueTournamentSeasonResult;
 }
 
+interface IPlayerRanking {
+    league?: League;
+    clan?: IPlayerRankingClan;
+    attackWins?: number;
+    defenseWins?: number;
+    tag?: string;
+    name?: string;
+    expLevel?: number;
+    rank?: number;
+    previousRank?: number;
+    trophies?: number;
+}
+interface IPlayerRankingList {
+    items: IPlayerRanking[];
+}
+
+interface IPlayerRankingClan {
+    tag?: string;
+    name?: string;
+    badgeUrls?: Object;
+}
+
 type TStringList = string[];
 
 interface IVerifyTokenResponse {
@@ -250,4 +276,7 @@ interface IWarClan {
 interface IWarLeague {
     name?: IJsonLocalizedName;
     id?: number;
+}
+interface IWarLeagueList {
+    items: IWarLeague[];
 }
