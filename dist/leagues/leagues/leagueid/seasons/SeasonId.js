@@ -13,11 +13,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class SeasonId {
     static get(api, leagueId, seasonId, params) {
         return __awaiter(this, void 0, void 0, function* () {
-            leagueId = encodeURIComponent(leagueId);
-            seasonId = encodeURIComponent(seasonId);
             try {
-                const res = yield api.get(this.path.replace('{leagueId}', leagueId).replace('{seasonId}', seasonId), params);
-                return res.data;
+                const res = yield api.get(this.path
+                    .replace('{leagueId}', leagueId.toString())
+                    .replace('{seasonId}', seasonId), params);
+                return res.data.items;
             }
             catch (err) {
                 throw err;

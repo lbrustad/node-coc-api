@@ -13,10 +13,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class Seasons {
     static get(api, leagueId, params) {
         return __awaiter(this, void 0, void 0, function* () {
-            leagueId = encodeURIComponent(leagueId);
             try {
-                const res = yield api.get(this.path.replace('{clanTag}', leagueId), params);
-                return res.data;
+                const res = yield api.get(this.path.replace('{leagueId}', leagueId.toString()), params);
+                return res.data.items;
             }
             catch (err) {
                 throw err;

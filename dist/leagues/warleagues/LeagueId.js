@@ -13,9 +13,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class LeagueId {
     static get(api, leagueId) {
         return __awaiter(this, void 0, void 0, function* () {
-            leagueId = encodeURIComponent(leagueId);
             try {
-                const res = yield api.get(this.path.replace('{leagueId}', leagueId));
+                const res = yield api.get(this.path.replace('{leagueId}', leagueId.toString()));
                 return res.data;
             }
             catch (err) {

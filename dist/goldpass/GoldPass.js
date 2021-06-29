@@ -10,12 +10,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-class WarLeagues {
-    static get(api, params) {
+class GoldPass {
+    static get(api) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const res = yield api.get(this.path, params);
-                return res.data.items;
+                const res = yield api.get(this.path);
+                return res.data;
             }
             catch (err) {
                 throw err;
@@ -23,5 +23,5 @@ class WarLeagues {
         });
     }
 }
-exports.default = WarLeagues;
-WarLeagues.path = '/warleagues';
+exports.default = GoldPass;
+GoldPass.path = '/goldpass/seasons/current';

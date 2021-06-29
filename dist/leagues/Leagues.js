@@ -15,7 +15,7 @@ class Leagues {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const res = yield api.get(this.path, params);
-                return res.data;
+                return res.data.items;
             }
             catch (err) {
                 throw err;
