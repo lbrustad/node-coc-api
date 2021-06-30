@@ -133,7 +133,9 @@ interface ILabel {
     id?: number;
     iconUrls?: Object;
 }
-type TLabelList = ILabel[];
+interface ILabelList {
+    items: ILabel[];
+}
 
 interface ILanguage {
     name?: string;
