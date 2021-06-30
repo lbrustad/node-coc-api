@@ -43,6 +43,29 @@ interface IClanMember {
 }
 type TClanMemberList = IClanMember[];
 
+interface IClanRanking {
+    clanLevel?: number;
+    clanPoints?: number;
+    location?: Location;
+    members?: number;
+    tag?: string;
+    name?: string;
+    rank?: number;
+    previousRank?: number;
+    badgeUrls?: Object;
+}
+interface IClanRankingList {
+    items: IClanRanking[];
+}
+
+interface IClanVersusRanking {
+    clanPoints?: number;
+    clanVersusPoints?: number;
+}
+interface IClanVersusRankingList {
+    items: IClanVersusRanking[];
+}
+
 interface IClanWar {
     clan?: IWarClan;
     teamSize?: number;
@@ -172,6 +195,9 @@ interface ILocation {
     isCountry?: boolean;
     countryCode?: string;
 }
+interface ILocationList {
+    items: ILocation[];
+}
 
 interface IPlayer {
     league?: ILeague;
@@ -258,6 +284,20 @@ interface IPlayerRankingClan {
     tag?: string;
     name?: string;
     badgeUrls?: Object;
+}
+
+interface IPlayerVersusRanking {
+    clan?: IPlayerRankingClan;
+    versusBattleWins?: number;
+    tag?: string;
+    name?: string;
+    expLevel?: number;
+    rank?: number;
+    previousRank?: number;
+    versusTrophies?: number;
+}
+interface IPlayerVersusRankingList {
+    items: IPlayerVersusRanking[];
 }
 
 type TStringList = string[];

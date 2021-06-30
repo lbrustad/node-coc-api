@@ -12,9 +12,13 @@ const CLAN_TAG = '#29UR8RVLY';
 const PLAYER_TAG = '#8892QGUY';
 const PLAYER_TOKEN = 'get your token from in-game settings';
 
+// for testing "/locations" based endpoints
+const LOCATION_ID = 32000176; // - must be a country ID
+
 export default api;
 export {
     CLAN_TAG,
     PLAYER_TAG,
-    PLAYER_TOKEN
+    PLAYER_TOKEN,
+    LOCATION_ID
 }
