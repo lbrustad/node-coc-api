@@ -12,7 +12,7 @@ interface IMembersSearchBeforeParams {
     before?: string;
 }
 
-type TMembersSearchParams = IMembersSearchAfterParams | IMembersSearchBeforeParams;
+export type TMembersSearchParams = IMembersSearchAfterParams | IMembersSearchBeforeParams;
 
 export default class Members {
     static readonly path: string = '/clans/{clanTag}/members';

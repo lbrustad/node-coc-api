@@ -12,7 +12,7 @@ interface ILeaguesSearchBeforeParams {
     before?: string;
 }
 
-type TLeaguesSearchParams = ILeaguesSearchAfterParams | ILeaguesSearchBeforeParams;
+export type TLeaguesSearchParams = ILeaguesSearchAfterParams | ILeaguesSearchBeforeParams;
 
 export default class Leagues {
     static readonly path: string = '/leagues';

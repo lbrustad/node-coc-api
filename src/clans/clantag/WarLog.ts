@@ -12,7 +12,7 @@ interface IWarLogSearchBeforeParams {
     before?: string;
 }
 
-type TWarLogSearchParams = IWarLogSearchAfterParams | IWarLogSearchBeforeParams;
+export type TWarLogSearchParams = IWarLogSearchAfterParams | IWarLogSearchBeforeParams;
 
 export default class WarLog {
     static readonly path: string = '/clans/{clanTag}/warlog';

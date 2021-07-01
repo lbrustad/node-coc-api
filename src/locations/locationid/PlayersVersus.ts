@@ -12,7 +12,7 @@ interface IRankingsSearchBeforeParams {
     before?: string;
 }
 
-type TRankingsSearchParams = IRankingsSearchAfterParams | IRankingsSearchBeforeParams;
+export type TRankingsSearchParams = IRankingsSearchAfterParams | IRankingsSearchBeforeParams;
 
 export default class PlayersVersusRankings {
     static readonly path: string = '/locations/{locationId}/rankings/players-versus';

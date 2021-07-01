@@ -12,7 +12,7 @@ interface ILocationsSearchBeforeParams {
     before?: string;
 }
 
-type TLocationsSearchParams = ILocationsSearchAfterParams | ILocationsSearchBeforeParams;
+export type TLocationsSearchParams = ILocationsSearchAfterParams | ILocationsSearchBeforeParams;
 
 export default class Locations {
     static readonly path: string = '/locations';

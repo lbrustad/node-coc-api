@@ -2,7 +2,7 @@
 
 import ClashOfClansAPI from '../ClashOfClansAPI'
 
-interface IClansSearchParams {
+export interface IClansSearchParams {
     name?: string;
     warFrequency?: string;
     locationId?: number;
@@ -16,7 +16,7 @@ interface IClansSearchParams {
     labelIds?: string[] | string;
 }
 
-interface IFilter {
+export interface IFilter {
     key: keyof IClan;
     value: string | number | boolean;
 }

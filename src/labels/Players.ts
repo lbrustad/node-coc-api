@@ -12,7 +12,7 @@ interface ILabelsSearchBeforeParams {
     before?: string;
 }
 
-type TLabelsSearchParams = ILabelsSearchAfterParams | ILabelsSearchBeforeParams;
+export type TLabelsSearchParams = ILabelsSearchAfterParams | ILabelsSearchBeforeParams;
 
 export default class PlayerLabels {
     static readonly path: string = '/labels/players';

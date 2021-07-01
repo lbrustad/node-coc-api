@@ -2,7 +2,7 @@
 
 import ClashOfClansAPI from '../../ClashOfClansAPI';
 
-interface IVerifyTokenSearchParams {
+export interface IVerifyTokenSearchParams {
     token: string;
 }
 

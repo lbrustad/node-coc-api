@@ -12,7 +12,7 @@ interface ISeasonsSearchBeforeParams {
     before?: string;
 }
 
-type TSeasonsSearchParams = ISeasonsSearchAfterParams | ISeasonsSearchBeforeParams;
+export type TSeasonsSearchParams = ISeasonsSearchAfterParams | ISeasonsSearchBeforeParams;
 
 export default class SeasonId {
     static readonly path: string = '/leagues/{leagueId}/seasons/{seasonId}';
