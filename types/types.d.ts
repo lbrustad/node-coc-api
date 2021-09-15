@@ -135,6 +135,11 @@ interface IClanWarMember {
 }
 type TClanWarMemberList = IClanWarMember[];
 
+interface IClashOfClansAPI {
+    get<TParams, TResponse>(path: string, params?: TParams): Promise<AxiosResponse<TResponse>>;
+    post<TParams, TResponse>(path: string, params?: TParams): Promise<AxiosResponse<TResponse>>;
+}
+
 interface IError {
     reason: string;
     message: string;

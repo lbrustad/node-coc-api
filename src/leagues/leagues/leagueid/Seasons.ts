@@ -1,7 +1,5 @@
 /// <reference path="../../../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../../../ClashOfClansAPI';
-
 interface ISeasonsSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TSeasonsSearchAfterParams = ISeasonsSearchAfterParams | ISeasonsSear
 export default class Seasons {
     static readonly path: string = '/leagues/{leagueId}/seasons';
 
-    static async get(api: ClashOfClansAPI, leagueId: number, params?: TSeasonsSearchAfterParams): Promise<ILeagueSeason[]> {
+    static async get(api: IClashOfClansAPI, leagueId: number, params?: TSeasonsSearchAfterParams): Promise<ILeagueSeason[]> {
         try {
             const res = await api.get<TSeasonsSearchAfterParams, ILeagueSeasonList>(
                 this.path.replace('{leagueId}', leagueId.toString()),

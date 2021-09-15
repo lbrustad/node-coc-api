@@ -1,7 +1,5 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../ClashOfClansAPI';
-
 interface IWarLeaguesSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TWarLeaguesSearchParams = IWarLeaguesSearchAfterParams | IWarLeagues
 export default class WarLeagues {
     static readonly path: string = '/warleagues';
 
-    static async get(api: ClashOfClansAPI, params?: TWarLeaguesSearchParams): Promise<IWarLeague[]> {
+    static async get(api: IClashOfClansAPI, params?: TWarLeaguesSearchParams): Promise<IWarLeague[]> {
         try {
             const res = await api.get<TWarLeaguesSearchParams, IWarLeagueList>(
                 this.path,

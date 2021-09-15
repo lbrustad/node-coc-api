@@ -1,7 +1,5 @@
 /// <reference path="../../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../../ClashOfClansAPI';
-
 interface IRankingsSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TRankingsSearchParams = IRankingsSearchAfterParams | IRankingsSearch
 export default class PlayersRankings {
     static readonly path: string = '/locations/{locationId}/rankings/players';
 
-    static async get(api: ClashOfClansAPI, locationId: number, params?: TRankingsSearchParams): Promise<IPlayerRanking[]> {
+    static async get(api: IClashOfClansAPI, locationId: number, params?: TRankingsSearchParams): Promise<IPlayerRanking[]> {
         try {
             const res = await api.get<TRankingsSearchParams, IPlayerRankingList>(
                 this.path.replace('{locationId}', locationId.toString()),

@@ -1,7 +1,5 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../ClashOfClansAPI';
-
 interface ILabelsSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TLabelsSearchParams = ILabelsSearchAfterParams | ILabelsSearchBefore
 export default class ClanLabels {
     static readonly path: string = '/labels/clans';
 
-    static async get(api: ClashOfClansAPI, params?: TLabelsSearchParams): Promise<ILabel[]> {
+    static async get(api: IClashOfClansAPI, params?: TLabelsSearchParams): Promise<ILabel[]> {
         try {
             const res = await api.get<TLabelsSearchParams, ILabelList>(
                 this.path,

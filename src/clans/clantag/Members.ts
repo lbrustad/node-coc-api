@@ -1,7 +1,5 @@
 /// <reference path="../../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../../ClashOfClansAPI';
-
 interface IMembersSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TMembersSearchParams = IMembersSearchAfterParams | IMembersSearchBef
 export default class Members {
     static readonly path: string = '/clans/{clanTag}/members';
 
-    static async get(api: ClashOfClansAPI, clanTag: string, params?: TMembersSearchParams): Promise<TClanMemberList> {
+    static async get(api: IClashOfClansAPI, clanTag: string, params?: TMembersSearchParams): Promise<TClanMemberList> {
         if (!clanTag.startsWith('#')) {
             clanTag = `#${clanTag}`;
         }

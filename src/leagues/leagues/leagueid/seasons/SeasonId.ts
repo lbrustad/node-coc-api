@@ -1,7 +1,5 @@
 /// <reference path="../../../../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../../../../ClashOfClansAPI';
-
 interface ISeasonsSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TSeasonsSearchParams = ISeasonsSearchAfterParams | ISeasonsSearchBef
 export default class SeasonId {
     static readonly path: string = '/leagues/{leagueId}/seasons/{seasonId}';
 
-    static async get(api: ClashOfClansAPI, leagueId: number, seasonId: string, params?: TSeasonsSearchParams): Promise<IPlayerRanking[]> {
+    static async get(api: IClashOfClansAPI, leagueId: number, seasonId: string, params?: TSeasonsSearchParams): Promise<IPlayerRanking[]> {
         try {
             const res = await api.get<TSeasonsSearchParams, IPlayerRankingList>(
                 this.path

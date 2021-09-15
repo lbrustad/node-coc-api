@@ -5,7 +5,7 @@ import ClashOfClansAPI from '../../ClashOfClansAPI';
 export default class CurrentWar {
     static readonly path: string = '/clans/{clanTag}/currentwar';
 
-    static async get(api: ClashOfClansAPI, clanTag: string): Promise<IClanWar> {
+    static async get(api: IClashOfClansAPI, clanTag: string): Promise<IClanWar> {
         if (!clanTag.startsWith('#')) {
             clanTag = `#${clanTag}`;
         }

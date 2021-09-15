@@ -1,7 +1,5 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../ClashOfClansAPI'
-
 export interface IClansSearchParams {
     name?: string;
     warFrequency?: string;
@@ -28,7 +26,7 @@ export default class Clans {
         return this._path;
     }
 
-    private static async getClanList(api: ClashOfClansAPI, params: IClansSearchParams) {
+    private static async getClanList(api: IClashOfClansAPI, params: IClansSearchParams) {
         if (Array.isArray(params.labelIds)) {
             params.labelIds = params.labelIds.join(',');
         }
@@ -39,7 +37,7 @@ export default class Clans {
             });
     }
 
-    static async get(api: ClashOfClansAPI, params: IClansSearchParams, filters?: IFilter[]): Promise<IClan[]> {
+    static async get(api: IClashOfClansAPI, params: IClansSearchParams, filters?: IFilter[]): Promise<IClan[]> {
         try {
             const res = await Clans.getClanList(api, params);
             const clanList = [...res.data.items];

@@ -1,7 +1,5 @@
 /// <reference path="../../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../../ClashOfClansAPI';
-
 export interface IVerifyTokenSearchParams {
     token: string;
 }
@@ -9,7 +7,7 @@ export interface IVerifyTokenSearchParams {
 export default class PlayerTag {
     static readonly path: string = '/players/{playerTag}/verifytoken';
 
-    static async get(api: ClashOfClansAPI, playerTag: string, params: IVerifyTokenSearchParams): Promise<IVerifyTokenResponse> {
+    static async get(api: IClashOfClansAPI, playerTag: string, params: IVerifyTokenSearchParams): Promise<IVerifyTokenResponse> {
         if (!playerTag.startsWith('#')) {
             playerTag = `#${playerTag}`;
         }

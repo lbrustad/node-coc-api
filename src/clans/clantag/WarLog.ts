@@ -1,7 +1,5 @@
 /// <reference path="../../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../../ClashOfClansAPI';
-
 interface IWarLogSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TWarLogSearchParams = IWarLogSearchAfterParams | IWarLogSearchBefore
 export default class WarLog {
     static readonly path: string = '/clans/{clanTag}/warlog';
 
-    static async get(api: ClashOfClansAPI, clanTag: string, params?: TWarLogSearchParams): Promise<IClanWarLogEntry[]> {
+    static async get(api: IClashOfClansAPI, clanTag: string, params?: TWarLogSearchParams): Promise<IClanWarLogEntry[]> {
         if (!clanTag.startsWith('#')) {
             clanTag = `#${clanTag}`;
         }

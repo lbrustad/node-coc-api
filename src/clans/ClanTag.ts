@@ -1,11 +1,9 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../ClashOfClansAPI';
-
 export default class ClanTag {
     static readonly path: string = '/clans/{clanTag}';
 
-    static async get(api: ClashOfClansAPI, clanTag: string): Promise<IClan> {
+    static async get(api: IClashOfClansAPI, clanTag: string): Promise<IClan> {
         if (!clanTag.startsWith('#')) {
             clanTag = `#${clanTag}`;
         }

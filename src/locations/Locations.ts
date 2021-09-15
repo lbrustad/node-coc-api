@@ -1,7 +1,5 @@
 /// <reference path="../../types/types.d.ts"/>
 
-import ClashOfClansAPI from '../ClashOfClansAPI';
-
 interface ILocationsSearchAfterParams {
     limit?: number;
     after?: string;
@@ -17,7 +15,7 @@ export type TLocationsSearchParams = ILocationsSearchAfterParams | ILocationsSea
 export default class Locations {
     static readonly path: string = '/locations';
 
-    static async get(api: ClashOfClansAPI, params?: TLocationsSearchParams): Promise<ILocation[]> {
+    static async get(api: IClashOfClansAPI, params?: TLocationsSearchParams): Promise<ILocation[]> {
         try {
             const res = await api.get<TLocationsSearchParams, ILocationList>(
                 this.path,

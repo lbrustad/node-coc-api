@@ -5,7 +5,7 @@ interface IClashOfClansAPIConfig {
     endpoint?: string
 }
 
-export default class ClashOfClansAPI {
+export default class ClashOfClansAPI implements IClashOfClansAPI {
     readonly token: string | undefined;
     readonly endpoint: string | undefined;
 
