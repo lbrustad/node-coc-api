@@ -1,8 +1,8 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
 interface IClashOfClansAPIConfig {
-    token: string,
-    endpoint?: string
+    token: string;
+    endpoint?: string;
 }
 
 export default class ClashOfClansAPI implements IClashOfClansAPI {
